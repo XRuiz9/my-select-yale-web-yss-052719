@@ -2,8 +2,8 @@ def my_select(collection)
   i = 0
   new = []
   while i < collection.length
-    newV = yield(collection[i])
-    new << newV
+    if (yield(collection[i]))
+    new << collection[i]
     i = i + 1
   end
   new
